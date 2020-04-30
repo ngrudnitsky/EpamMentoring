@@ -1,0 +1,26 @@
+This is non-static factory method that returns instance of another class. It is used instance is not known and decided at runtime.Salary Factory is created.
+This is a static factory method that returns instance of another class. It is used instance is not known and decided at runtime.Employee Service is created.
+Position Service is created from factory that implements FactoryBean interface.
+January:
+Position: 'Junior backend developer', salary = 17.13, employees = [Bob, Dan], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}
+Position: 'Senior backend developer', salary = 300.00, employees = [John], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}
+Position: 'Middle backend developer', salary = 180.00, employees = [Steve], skills = {Skill{name='Java script'}=3}
+Position: 'Project team leader', salary = 450.00, employees = [Ban], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}
+February:
+Crisis! Some salaries are down!
+Position: 'Junior backend developer', salary = 16.42, employees = [Bob, Dan], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}
+March:
+Steve was fired.
+Crisis! Some salaries are down!
+Position: 'Middle backend developer', salary = 169.57, employees = [], skills = {Skill{name='Java script'}=3}
+April:
+Mike was hired.
+Position: 'Middle backend developer', salary = 169.57, employees = [Mike], skills = {Skill{name='Java script'}=3}
+May:
+John was fired.
+Position: 'Senior backend developer', salary = 300.00, employees = [], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}
+June:
+Position senior backend developer was abolished.
+[Position: 'Middle backend developer', salary = 169.57, employees = [Mike], skills = {Skill{name='Java script'}=3}, Position: 'Junior backend developer', salary = 16.42, employees = [Bob, Dan], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}, Position: 'Project team leader', salary = 450.00, employees = [Ban], skills = {Skill{name='Java'}=2, Skill{name='Java script'}=3}]
+
+Process finished with exit code 0

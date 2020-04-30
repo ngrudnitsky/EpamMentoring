@@ -1,0 +1,13 @@
+Bean F initializing
+A{name='This is from the properties file'}
+B{name='A Class', a=A{name='This is from the properties file'}}
+C{name='C Class'}
+d1: D{name='D Class'}
+d2: D{name='D Class'}
+d1 == d2 - false
+E{name='E Class'}
+Hello from replaced method!
+F{name='F Class'}
+Bean F destroying
+
+Process finished with exit code 0

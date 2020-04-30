@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+
+    <!-- bean definitions here -->
+    <context:property-placeholder location="beansProperties.properties"/>
+    <context:annotation-config/>
+
+    <bean id="A" class="by.epam.nickgrudnitsky.homework4.task1.beans.A">
+        <property name="name" value="${name}"/>
+    </bean>
+
+    <bean id="B" class="by.epam.nickgrudnitsky.homework4.task1.beans.B">
+        <constructor-arg name="name" value="A Class"/>
+        <constructor-arg name="a" ref="A"/>
+    </bean>
+
+    <bean id="D" class="by.epam.nickgrudnitsky.homework4.task1.beans.D" scope="prototype">
+        <property name="name" value="D Class"/>
+    </bean>
+
+    <bean id="C" class="by.epam.nickgrudnitsky.homework4.task1.beans.C">
+        <property name="name" value="C Class"/>
+        <lookup-method name="createD" bean="D"/>
+    </bean>
+
+    <bean id="methodReplacer" class="by.epam.nickgrudnitsky.homework4.task1.NewSayHelloMethodForEClass"/>
+
+    <bean id="E" class="by.epam.nickgrudnitsky.homework4.task1.beans.E">
+        <property name="name" value="E Class"/>
+        <replaced-method name="sayHello" replacer="methodReplacer"/>
+    </bean>
+
+    <bean id="F" class="by.epam.nickgrudnitsky.homework4.task1.beans.F"
+          init-method="initializeF" destroy-method="destroyF">
+        <property name="name" value="F Class"/>
+    </bean>
+</beans>
