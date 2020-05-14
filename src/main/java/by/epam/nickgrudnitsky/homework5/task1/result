@@ -1,0 +1,6 @@
+Before serialization:
+User NickGSid 1
+Role Admin
+After serialization:
+User NickGSid 1
+Role Admin

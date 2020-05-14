@@ -1,0 +1,5 @@
+Total execution time with FileStreams: 12ms
+Total execution time with FileStreams with buffer: 1ms
+Total execution time with FileChannel: 22ms
+Total execution time with NIO 2 File API v.1: 5ms
+Total execution time with NIO 2 File API v.2: 1ms
